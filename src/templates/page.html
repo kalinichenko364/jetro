@@ -1,0 +1,23 @@
+---
+title: Blog
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="main">
+
+      {% include "partials/_main-header.html" %}
+
+    <div class="container">
+      <div class="main-i">
+        {% include "partials/_main-content.html" %}
+
+        {% include "partials/_aside.html" %}
+      </div>
+    </div>
+    
+
+  </div>
+
+{% endblock %}

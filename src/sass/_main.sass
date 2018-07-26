@@ -1,0 +1,22 @@
+.container
+  width: 960px
+  padding: 0 10px
+  margin: 0 auto
+  +r(960)
+    width: 100%
+
+.btn-nav
+  position: absolute
+  top: 25px
+  right: 15px
+  margin-left: auto
+  display: none
+  +r(768)
+    display: block
+    width: 25px
+    height: 25px
+    background-image: url("../img/burger.svg")
+    background-color: transparent
+    fill: black
+.btn-nav.active
+  background-image: url("../img/close.svg")

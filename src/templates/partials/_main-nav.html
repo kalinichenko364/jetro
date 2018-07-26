@@ -1,0 +1,39 @@
+{% set
+  mainNav = [
+    {
+      title: "Home",
+      href: "#",
+      class:""
+    },
+    {
+      title: "About us",
+      href: "#",
+      class:""
+    },
+    {
+      title: "Blog",
+      href: "#",
+      class:"is-active"
+    },
+    {
+      title: "Portfolio",
+      href: "#",
+      class:""
+    },
+    {
+      title: "Contacts us",
+      href: "#",
+      class:""
+    }
+  ]
+  %}
+  
+  <nav class="main-nav">
+    <ul class="main-nav__list">
+      {% for item in mainNav %}
+      <li class="main-nav__item">
+        <a href="{{item.href}}" class="main-nav__link {{item.class}}">{{item.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>

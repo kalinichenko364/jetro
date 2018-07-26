@@ -1,0 +1,45 @@
+<div class="post">
+  <div class="post__icon">
+    {{mixins.icon(post.icon)}}
+  </div>
+  {% if post.slider or post.img or post.video %}
+  <div class="post__media">
+    {% if post.slider %}
+      <img src="{{post.slider}}" alt="">
+    {% endif %}
+
+    {% if post.img %}
+      <img src="{{post.img}}" alt="">
+    {% endif %}
+
+    {% if post.video %}
+    <div class="post__video">
+      <iframe src="https://player.vimeo.com/video/188113346" width="100%" height="370px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+  <div class="post__content">
+    {% if post.postset %}
+      {% include "partials/_post-data.html" %}
+    {% endif %}
+
+    <div class="post__descr">
+      <h2 class="post__title">{{post.title}}</h2>
+        {% if post.link_text %}
+          <a class="post__link-text" href="{{post.link_site}}">{{post.link_text}}</a>
+        {% endif %}
+      <div class="post__text">
+        <p>{{post.descr1}}</p>
+        <p>{{post.descr2}}</p>
+      </div>
+    </div>
+
+    {% if post.quotes %}
+      <div class="post__quotes">
+        <p>{{post.quotes}}</p>
+      </div>
+    {% endif %}
+
+  </div>
+</div>
