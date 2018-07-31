@@ -1,8 +1,8 @@
 .post
   position: relative
   width: 100%
-  padding-bottom: 40px
-  margin-bottom: 40px
+  padding-bottom: 45px
+  margin-bottom: 55px
   background: url("../img/bg-grey.png") repeat-x bottom
 
   &__icon
@@ -19,31 +19,67 @@
       fill: #fff
 
   &__media
+    position: relative
     width: 100%
-    margin-bottom: 20px
+    margin-bottom: 16px
     img
       width: 100%
+      +css-lock(143, 300, 320, 960, height, px)
+      object-fit: cover
+
+    .slick-arrow
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      z-index: 3
+      width: 36px
+      height: 52px
+      font-size: 0
+    .slick-prev
+      left: 20px
+      background: url("../img/prev.png") no-repeat 50% 50%
+    .slick-next
+      right: 20px
+      background: url("../img/next.png") no-repeat 50% 50%
+
+  &__video
+    position:relative
+    padding: 56.25% 0 0 0
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
   
   &__content
     display: flex
+    padding-right: 10px
 
   &__title
-    margin-bottom: 2px
+    margin-bottom: 16px
     +bebas
-    font-size: 18px
+    font-size: 22px
     line-height: 1
+    letter-spacing: 0.8px
     color: $red
     text-transform: uppercase
 
   &__text
-    margin-top: 20px
     p
-      margin-bottom: 20px
+      margin-top: 20px
+      margin-bottom: 17px
+
+  &__descr
+    & .post__title
+      margin-bottom: 0
 
   &__link-text
     color: #a0a0a0
 
   &__quotes
-    padding: 20px
-    padding-left: 70px
-    background: whitesmoke url("../img/bg-quotes.png") no-repeat 30px 20px
+    padding: 17px
+    padding-left: 75px
+    margin-bottom: 15px
+    font-size: 14px
+    background: whitesmoke url("../img/bg-quotes.png") no-repeat 35px 15px

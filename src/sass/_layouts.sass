@@ -1,5 +1,7 @@
 .main-i
   display: flex
+  +r(600)
+    flex-direction: column
 
 .main-content
   width: 670px
@@ -15,4 +17,7 @@
     width: 24%
     margin-left: 5%
   +r(600)
-    display: none
+    display: flex
+    flex-direction: column
+    width: 100%
+    margin-left: 0

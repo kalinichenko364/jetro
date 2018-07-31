@@ -1,3 +1,82 @@
+{% set gallery = [
+    {
+      small_img: "img/gallery-1.png",
+      img: "img/gallery-1.png",
+      data_caption: "Caption #1"
+    },
+    {
+      small_img: "img/gallery-2.png",
+      img: "img/gallery-2.png",
+      data_caption: "Caption #2"
+    },
+    {
+      small_img: "img/gallery-3.png",
+      img: "img/gallery-3.png",
+      data_caption: "Caption #3"
+    },
+    {
+      small_img: "img/gallery-4.png",
+      img: "img/gallery-4.png",
+      data_caption: "Caption #4"
+    },
+    {
+      small_img: "img/gallery-5.png",
+      img: "img/gallery-5.png",
+      data_caption: "Caption #5"
+    },
+    {
+      small_img: "img/gallery-1.png",
+      img: "img/gallery-1.png",
+      data_caption: "Caption #1"
+    },
+    {
+      small_img: "img/gallery-2.png",
+      img: "img/gallery-2.png",
+      data_caption: "Caption #2"
+    },
+    {
+      small_img: "img/gallery-3.png",
+      img: "img/gallery-3.png",
+      data_caption: "Caption #3"
+    }
+  ]
+%}
+
+{%
+  set categories = [
+    {
+      link: "#",
+      name: "Video",
+      count: "3"
+    },
+    {
+      link: "#",
+      name: "Sports",
+      count: "5"
+    },
+    {
+      link: "#",
+      name: "Media",
+      count: "2"
+    },
+    {
+      link: "#",
+      name: "Entertainment",
+      count: "7"
+    },
+    {
+      link: "#",
+      name: "Life",
+      count: "4"
+    },
+    {
+      link: "#",
+      name: "Super Cool Stuff",
+      count: "8"
+    }
+  ]
+%}
+
 <div class="aside">
   <div class="aside__item about-jetro">
       <a href="#" class="aside__head-link">
@@ -7,7 +86,7 @@
         </div>
       </a>
     <div class="about-jetro__content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum
     </div>
   </div>
   <div class="aside__item categories">
@@ -17,15 +96,13 @@
         <div class="aside__head-line"></div>
       </div>
     </a>
-    <ul class="categories__list">
-      <li class="categories__item">Video (3)</li>
-      <li class="categories__item">Sports (5)</li>
-      <li class="categories__item">Media (2)</li>
-      <li class="categories__item">Entertainment (7)</li>
-      <li class="categories__item">Life (4)</li>
-      <li class="categories__item">Super Cool Stuff (8)</li>
-    </ul>
+    <div class="categories__list">
+      {% for item in categories %}
+        {% include "partials/_categories.html" %}
+      {% endfor %}
+    </div>
   </div>
+
   <div class="aside__item gallery">
     <a href="#" class="aside__head-link">
       <div class="aside__head">
@@ -34,14 +111,9 @@
       </div>
     </a>
     <div class="gallery__content">
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
-      <div class="gallery__item"></div>
+      {% for item in gallery %}
+        {% include "partials/_gallery.html" %}
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,9 +1,5 @@
-import 'slick-carousel';
+import './burger.js';
 
+import './slider.js';
 
-// burger
-
-$('.js-open-menu').on('click', function(e) {
-  $('.main-nav').toggleClass('active');
-  $(this).toggleClass('active');
-});
+import './gallery.js';
