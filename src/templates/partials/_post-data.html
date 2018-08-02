@@ -1,41 +1,24 @@
-{% set post_dataset = [
+{% set post_meta = [
     {
-      date_title: "Date",
+      data_title: "Date",
       date: "April 15, 2012"
     },
     {
-      date_title: "Tabs",
+      data_title: "Tabs",
       link1: "Website",
       link2: "Design"
     },
     {
-      date_title: "Comments",
+      data_title: "Comments",
       count: "4"
     }
   ]
 %}
 
-<div class="post-data">
-  {% for post_data in post_dataset %}
-    <dl class="post-data__item">
-      <dt class="post-data__title">{{post_data.date_title}}</dt>
-      <dd class="post-data__disc">
-        {% if post_data.date %}
-          {{post_data.date}}
-        {% endif %}
+<div class="post-meta">
+  {% for data in post_meta %}
 
-        {% if post_data.link1 %}
-          <a href="">{{post_data.link1}}</a>
-        {% endif %}
-        
-        {% if post_data.link2 %}
-          <a href="">{{post_data.link2}}</a>
-        {% endif %}
+    {% include "partials/_data.html" %}
 
-        {% if post_data.count %}
-          <a href="">{{post_data.count}}</a>
-        {% endif %}
-      </dd>
-    </dl>
   {% endfor %}
 </div>

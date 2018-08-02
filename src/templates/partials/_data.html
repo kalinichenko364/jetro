@@ -1,0 +1,20 @@
+<dl class="data">
+  <dt class="data__label">{{data.data_title}}</dt>
+  <dd class="data__value">
+    {% if data.date %}
+      {{data.date}}
+    {% endif %}
+
+    {% if data.link1 %}
+      <a href="#">{{data.link1}}</a>
+    {% endif %}
+    
+    {% if data.link2 %}
+      <a href="#">{{data.link2}}</a>
+    {% endif %}
+
+    {% if data.count %}
+      <a href="#">{{data.count}}</a>
+    {% endif %}
+  </dd>
+</dl>
